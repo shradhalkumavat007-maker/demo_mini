@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1050" width="1200" height="1050">
+  <rect width="1200" height="1050" fill="#FFFFFF"/>
+  
+  <!-- Header -->
+  <rect x="50" y="25" width="1100" height="55" rx="8" fill="#1E293B"/>
+  <text x="600" y="60" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    ElectroStock - UML Activity Diagram: Stock Management Workflow
+  </text>
+
+  <!-- Start Node -->
+  <circle cx="600" cy="120" r="15" fill="#0F172A"/>
+
+  <line x1="600" y1="135" x2="600" y2="175" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+  <!-- Activity 1 -->
+  <rect x="470" y="175" width="260" height="45" rx="8" fill="#F8FAFC" stroke="#2563EB" stroke-width="2"/>
+  <text x="600" y="202" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">User Selects Inventory Action</text>
+
+  <line x1="600" y1="220" x2="600" y2="260" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+  <!-- Decision 1: Stock In vs Stock Out -->
+  <polygon points="600,260 670,300 600,340 530,300" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="600" y="305" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309" text-anchor="middle">Action Type?</text>
+
+  <!-- Left Branch: Stock In -->
+  <line x1="530" y1="300" x2="300" y2="300" stroke="#0F172A" stroke-width="2"/>
+  <line x1="300" y1="300" x2="300" y2="360" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="380" y="290" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#1D4ED8">[Stock-In / Restock]</text>
+
+  <rect x="180" y="360" width="240" height="45" rx="8" fill="#F8FAFC" stroke="#2563EB" stroke-width="2"/>
+  <text x="300" y="388" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#1E293B" text-anchor="middle">Select Product &amp; Inbound PO</text>
+
+  <line x1="300" y1="405" x2="300" y2="445" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+  <rect x="180" y="445" width="240" height="45" rx="8" fill="#F8FAFC" stroke="#2563EB" stroke-width="2"/>
+  <text x="300" y="473" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#1E293B" text-anchor="middle">Scan / Assign Hardware Serial Nos</text>
+
+  <line x1="300" y1="490" x2="300" y2="530" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+  <rect x="180" y="530" width="240" height="45" rx="8" fill="#F8FAFC" stroke="#2563EB" stroke-width="2"/>
+  <text x="300" y="558" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#1E293B" text-anchor="middle">Increment Product Stock (+Qty)</text>
+
+  <!-- Right Branch: Stock Out -->
+  <line x1="670" y1="300" x2="900" y2="300" stroke="#0F172A" stroke-width="2"/>
+  <line x1="900" y1="300" x2="900" y2="360" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="800" y="290" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#1D4ED8">[Stock-Out / POS Sale]</text>
+
+  <rect x="780" y="360" width="240" height="45" rx="8" fill="#F8FAFC" stroke="#2563EB" stroke-width="2"/>
+  <text x="900" y="388" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#1E293B" text-anchor="middle">Select Product &amp; Selling Qty</text>
+
+  <line x1="900" y1="405" x2="900" y2="445" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+  <!-- Decision: Stock Available? -->
+  <polygon points="900,445 960,480 900,515 840,480" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="900" y="484" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#B45309" text-anchor="middle">Stock &gt;= Qty?</text>
+
+  <!-- Insufficient Stock Error -->
+  <line x1="960" y1="480" x2="1080" y2="480" stroke="#DC2626" stroke-width="2"/>
+  <line x1="1080" y1="480" x2="1080" y2="540" stroke="#DC2626" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="1010" y="470" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#DC2626">[No]</text>
+
+  <rect x="1000" y="540" width="160" height="40" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="1080" y="565" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#B91C1C" text-anchor="middle">Display Error &amp; Abort</text>
+
+  <!-- Sufficient Stock -->
+  <line x1="900" y1="515" x2="900" y2="555" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="915" y="535" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#16A34A">[Yes]</text>
+
+  <rect x="780" y="555" width="240" height="45" rx="8" fill="#F8FAFC" stroke="#2563EB" stroke-width="2"/>
+  <text x="900" y="582" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#1E293B" text-anchor="middle">Deduct Stock &amp; Calc Profit/Loss</text>
+
+  <!-- Merge / Join -->
+  <line x1="300" y1="575" x2="300" y2="650" stroke="#0F172A" stroke-width="2"/>
+  <line x1="300" y1="650" x2="520" y2="650" stroke="#0F172A" stroke-width="2"/>
+  <line x1="900" y1="600" x2="900" y2="650" stroke="#0F172A" stroke-width="2"/>
+  <line x1="900" y1="650" x2="680" y2="650" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- Synchronization bar -->
+  <rect x="520" y="646" width="160" height="8" rx="2" fill="#0F172A"/>
+
+  <line x1="600" y1="654" x2="600" y2="694" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+  <!-- Action: Oracle Persistence -->
+  <rect x="440" y="694" width="320" height="50" rx="8" fill="#CCFBF1" stroke="#0D9488" stroke-width="2"/>
+  <text x="600" y="723" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0F766E" text-anchor="middle">
+    Persist &amp; Commit to Oracle Database XE
+  </text>
+
+  <line x1="600" y1="744" x2="600" y2="784" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+  <!-- Decision: Low stock check -->
+  <polygon points="600,784 670,820 600,856 530,820" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="600" y="824" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#B45309" text-anchor="middle">Stock &lt;= Min?</text>
+
+  <!-- Alert -->
+  <line x1="670" y1="820" x2="800" y2="820" stroke="#D97706" stroke-width="2"/>
+  <line x1="800" y1="820" x2="800" y2="865" stroke="#D97706" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="730" y="810" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#D97706">[Yes]</text>
+
+  <rect x="710" y="865" width="180" height="40" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+  <text x="800" y="890" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#B45309" text-anchor="middle">Trigger Low-Stock Alert</text>
+
+  <!-- Join back -->
+  <line x1="600" y1="856" x2="600" y2="930" stroke="#0F172A" stroke-width="2"/>
+  <line x1="800" y1="905" x2="800" y2="930" stroke="#0F172A" stroke-width="2"/>
+  <line x1="800" y1="930" x2="600" y2="930" stroke="#0F172A" stroke-width="2"/>
+
+  <line x1="600" y1="930" x2="600" y2="970" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+
+  <!-- Final Node -->
+  <circle cx="600" cy="990" r="18" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="600" cy="990" r="11" fill="#0F172A"/>
+</svg>

@@ -1,0 +1,153 @@
+// ElectroStock SQLite Database Schema
+// Production-ready: single file DB, zero config, survives restart
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id          String    @id
+  name        String    @unique
+  description String    @default("")
+  createdAt   DateTime  @default(now())
+  products    Product[]
+}
+
+model Supplier {
+  id        String    @id
+  name      String
+  company   String
+  phone     String
+  email     String
+  address   String
+  gstin     String    @default("")
+  status    String    @default("active")
+  createdAt DateTime  @default(now())
+  products  Product[]
+}
+
+model Product {
+  id                  String        @id
+  name                String
+  sku                 String        @unique
+  categoryId          String
+  brand               String
+  model               String
+  supplierId          String
+  stock               Int           @default(0)
+  minStock            Int           @default(0)
+  purchasePrice       Float
+  sellingPrice        Float
+  warrantyPeriodMonths Int          @default(0)
+  description         String        @default("")
+  imageUrl            String?
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+
+  category    Category     @relation(fields: [categoryId], references: [id])
+  supplier    Supplier     @relation(fields: [supplierId], references: [id])
+  serials     Serial[]
+  warranties  Warranty[]
+  transactions Transaction[]
+}
+
+model Serial {
+  id           String    @id
+  productId    String
+  productName  String
+  serialNumber String    @unique
+  imei         String?
+  status       String    @default("available")
+  warrantyId   String?
+  dateAdded    DateTime  @default(now())
+  dateSold     DateTime?
+  customerRef  String?
+
+  product  Product   @relation(fields: [productId], references: [id])
+}
+
+model Warranty {
+  id            String    @id
+  productId     String
+  productName   String
+  serialNumber  String
+  customerRef   String
+  customerName  String?
+  customerEmail String?
+  customerPhone String?
+  startDate     DateTime
+  endDate       DateTime
+  status        String    @default("active")
+  notes         String?
+  createdAt     DateTime  @default(now())
+
+  product Product        @relation(fields: [productId], references: [id])
+  claims  WarrantyClaim[]
+}
+
+model WarrantyClaim {
+  id               String   @id
+  warrantyId       String
+  date             DateTime @default(now())
+  issueDescription String
+  status           String   @default("pending")
+  resolutionNotes  String?
+
+  warranty Warranty @relation(fields: [warrantyId], references: [id])
+}
+
+model Transaction {
+  id            String   @id
+  productId     String
+  productName   String
+  type          String
+  quantity      Int
+  unitPrice     Float
+  totalValue    Float
+  purchaseCost  Float    @default(0)
+  profitLoss    Float    @default(0)
+  date          DateTime @default(now())
+  userId        String   @default("")
+  userName      String   @default("")
+  reference     String   @default("")
+  customerRef   String   @default("")
+  notes         String   @default("")
+  serialNumbers String   @default("[]")
+
+  product Product @relation(fields: [productId], references: [id])
+}
+
+model User {
+  id        String   @id
+  name      String
+  email     String   @unique
+  role      String   @default("staff")
+  phone     String   @default("")
+  status    String   @default("active")
+  createdAt DateTime @default(now())
+}
+
+model Settings {
+  id              String  @id @default("1")
+  storeName       String  @default("ElectroStock")
+  storeAddress    String  @default("")
+  storePhone      String  @default("")
+  storeEmail      String  @default("")
+  gstNumber       String  @default("")
+  currencySymbol  String  @default("₹")
+  lowStockAlert   Int     @default(5)
+  taxRate         Float   @default(18)
+  upiId           String  @default("")
+}
+
+model Receipt {
+  id             String   @id
+  receiptNumber  String   @unique
+  data           String   // JSON blob for full receipt
+  createdAt      DateTime @default(now())
+}

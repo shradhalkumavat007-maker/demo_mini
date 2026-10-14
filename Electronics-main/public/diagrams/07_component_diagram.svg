@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 900" width="1350" height="900">
+  <rect width="1350" height="900" fill="#FFFFFF"/>
+  
+  <!-- Header -->
+  <rect x="50" y="25" width="1250" height="55" rx="8" fill="#1E293B"/>
+  <text x="675" y="60" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    ElectroStock - UML Component Diagram
+  </text>
+
+  <!-- Subsystem 1: Client Subsystem -->
+  <rect x="70" y="110" width="360" height="740" rx="8" fill="#F8FAFC" stroke="#0284C7" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="250" y="140" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#0369A1" text-anchor="middle">
+    &lt;&lt;subsystem&gt;&gt; Frontend Client
+  </text>
+
+  <!-- Component: UI Pages -->
+  <g transform="translate(110, 170)">
+    <rect width="280" height="100" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#E0F2FE" stroke="#0284C7"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#E0F2FE" stroke="#0284C7"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0369A1" text-anchor="middle">&lt;&lt;component&gt;&gt;</text>
+    <text x="140" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">Next.js UI Pages</text>
+    <text x="140" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Products, POS, Inventory, History</text>
+  </g>
+
+  <!-- Component: Zustand Store -->
+  <g transform="translate(110, 310)">
+    <rect width="280" height="100" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#E0F2FE" stroke="#0284C7"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#E0F2FE" stroke="#0284C7"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0369A1" text-anchor="middle">&lt;&lt;component&gt;&gt;</text>
+    <text x="140" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">Zustand Store Engine</text>
+    <text x="140" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">inventory-store.ts, auth-store.ts</text>
+  </g>
+
+  <!-- Component: API Client -->
+  <g transform="translate(110, 450)">
+    <rect width="280" height="100" rx="4" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#E0F2FE" stroke="#0284C7"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#E0F2FE" stroke="#0284C7"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0369A1" text-anchor="middle">&lt;&lt;component&gt;&gt;</text>
+    <text x="140" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">API Client Layer</text>
+    <text x="140" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">api-client.ts (Fetch REST Client)</text>
+  </g>
+
+  <!-- Subsystem 2: Java Backend Subsystem -->
+  <rect x="490" y="110" width="380" height="740" rx="8" fill="#F8FAFC" stroke="#2563EB" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="680" y="140" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1D4ED8" text-anchor="middle">
+    &lt;&lt;subsystem&gt;&gt; Java 26 REST Backend
+  </text>
+
+  <!-- Component: REST Server -->
+  <g transform="translate(540, 170)">
+    <rect width="280" height="100" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#DBEAFE" stroke="#2563EB"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#DBEAFE" stroke="#2563EB"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8" text-anchor="middle">&lt;&lt;component&gt;&gt;</text>
+    <text x="140" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">ElectroStockServer</text>
+    <text x="140" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">JDK HttpServer, CORS, Port 8085</text>
+  </g>
+
+  <!-- Component: DataStore Core -->
+  <g transform="translate(540, 310)">
+    <rect width="280" height="100" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#DBEAFE" stroke="#2563EB"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#DBEAFE" stroke="#2563EB"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8" text-anchor="middle">&lt;&lt;component&gt;&gt;</text>
+    <text x="140" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">DataStore Service</text>
+    <text x="140" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">In-Memory Cache &amp; Domain Logic</text>
+  </g>
+
+  <!-- Component: OracleDbService -->
+  <g transform="translate(540, 450)">
+    <rect width="280" height="100" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#DBEAFE" stroke="#2563EB"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#DBEAFE" stroke="#2563EB"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8" text-anchor="middle">&lt;&lt;component&gt;&gt;</text>
+    <text x="140" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">OracleDbService</text>
+    <text x="140" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">JDBC Persistence &amp; Queries</text>
+  </g>
+
+  <!-- Component: JsonUtil -->
+  <g transform="translate(540, 590)">
+    <rect width="280" height="100" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#DBEAFE" stroke="#2563EB"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#DBEAFE" stroke="#2563EB"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8" text-anchor="middle">&lt;&lt;component&gt;&gt;</text>
+    <text x="140" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">JsonUtil Parser</text>
+    <text x="140" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Native JSON Serialization</text>
+  </g>
+
+  <!-- Subsystem 3: Database Subsystem -->
+  <rect x="930" y="110" width="350" height="740" rx="8" fill="#F8FAFC" stroke="#0D9488" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="1105" y="140" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#0F766E" text-anchor="middle">
+    &lt;&lt;subsystem&gt;&gt; Database Layer
+  </text>
+
+  <!-- Component: JDBC Driver -->
+  <g transform="translate(970, 230)">
+    <rect width="270" height="100" rx="4" fill="#FFFFFF" stroke="#0D9488" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#CCFBF1" stroke="#0D9488"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#CCFBF1" stroke="#0D9488"/>
+    <text x="135" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0F766E" text-anchor="middle">&lt;&lt;component&gt;&gt;</text>
+    <text x="135" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">Oracle JDBC Driver</text>
+    <text x="135" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">ojdbc14.jar (Thin Client)</text>
+  </g>
+
+  <!-- Component: Oracle XE Database Tables -->
+  <g transform="translate(970, 450)">
+    <rect width="270" height="180" rx="4" fill="#FFFFFF" stroke="#0D9488" stroke-width="1.5"/>
+    <rect x="-10" y="15" width="20" height="12" fill="#CCFBF1" stroke="#0D9488"/>
+    <rect x="-10" y="45" width="20" height="12" fill="#CCFBF1" stroke="#0D9488"/>
+    <text x="135" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0F766E" text-anchor="middle">&lt;&lt;database&gt;&gt;</text>
+    <text x="135" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">Oracle 10g XE Tables</text>
+    <text x="15" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">• PRODUCTS</text>
+    <text x="15" y="100" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">• TRANSACTIONS</text>
+    <text x="15" y="120" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">• SERIAL_IMEI</text>
+    <text x="15" y="140" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">• WARRANTIES</text>
+    <text x="140" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">• USERS</text>
+    <text x="140" y="100" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">• CATEGORIES</text>
+    <text x="140" y="120" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">• SUPPLIERS</text>
+    <text x="140" y="140" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#334155">• RECEIPTS</text>
+  </g>
+
+  <!-- Connecting Arrows -->
+  <line x1="390" y1="500" x2="540" y2="220" stroke="#0284C7" stroke-width="2"/>
+  <line x1="680" y1="270" x2="680" y2="310" stroke="#2563EB" stroke-width="2"/>
+  <line x1="680" y1="410" x2="680" y2="450" stroke="#2563EB" stroke-width="2"/>
+  <line x1="820" y1="500" x2="970" y2="280" stroke="#0D9488" stroke-width="2"/>
+  <line x1="1105" y1="330" x2="1105" y2="450" stroke="#0D9488" stroke-width="2"/>
+</svg>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1100" width="1500" height="1100">
+  <rect width="1500" height="1100" fill="#FFFFFF"/>
+  
+  <!-- Header -->
+  <rect x="50" y="25" width="1400" height="55" rx="8" fill="#1E293B"/>
+  <text x="750" y="60" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    ElectroStock - UML Class Diagram
+  </text>
+
+  <!-- Class 1: Product -->
+  <g transform="translate(480, 120)">
+    <rect width="280" height="230" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="280" height="30" rx="4" fill="#DBEAFE"/>
+    <text x="140" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Product</text>
+    <line x1="0" y1="30" x2="280" y2="30" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="12" y="50" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- id: String</text>
+    <text x="12" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- name: String</text>
+    <text x="12" y="86" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- sku: String</text>
+    <text x="12" y="104" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- categoryId: String</text>
+    <text x="12" y="122" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- brand: String</text>
+    <text x="12" y="140" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- stock: int</text>
+    <text x="12" y="158" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- purchasePrice: double</text>
+    <text x="12" y="176" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- sellingPrice: double</text>
+    <line x1="0" y1="186" x2="280" y2="186" stroke="#2563EB" stroke-width="1"/>
+    <text x="12" y="204" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ getStockStatus(): String</text>
+    <text x="12" y="220" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ updateStock(qty: int): void</text>
+  </g>
+
+  <!-- Class 2: Category -->
+  <g transform="translate(100, 150)">
+    <rect width="240" height="150" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="240" height="30" rx="4" fill="#DBEAFE"/>
+    <text x="120" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Category</text>
+    <line x1="0" y1="30" x2="240" y2="30" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="12" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- id: String</text>
+    <text x="12" y="70" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- name: String</text>
+    <text x="12" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- description: String</text>
+    <text x="12" y="106" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- productCount: int</text>
+    <line x1="0" y1="116" x2="240" y2="116" stroke="#2563EB" stroke-width="1"/>
+    <text x="12" y="136" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ recalculateCounts(): void</text>
+  </g>
+
+  <!-- Class 3: Supplier -->
+  <g transform="translate(900, 130)">
+    <rect width="250" height="180" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="250" height="30" rx="4" fill="#DBEAFE"/>
+    <text x="125" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Supplier</text>
+    <line x1="0" y1="30" x2="250" y2="30" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="12" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- id: String</text>
+    <text x="12" y="70" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- name: String</text>
+    <text x="12" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- company: String</text>
+    <text x="12" y="106" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- gstin: String</text>
+    <text x="12" y="124" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- status: String</text>
+    <line x1="0" y1="134" x2="250" y2="134" stroke="#2563EB" stroke-width="1"/>
+    <text x="12" y="156" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ getOrders(): List&lt;PO&gt;</text>
+  </g>
+
+  <!-- Class 4: Transaction -->
+  <g transform="translate(100, 430)">
+    <rect width="270" height="220" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="270" height="30" rx="4" fill="#DBEAFE"/>
+    <text x="135" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Transaction</text>
+    <line x1="0" y1="30" x2="270" y2="30" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="12" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- id: String</text>
+    <text x="12" y="70" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- productId: String</text>
+    <text x="12" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- type: String (stock_in/out)</text>
+    <text x="12" y="106" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- quantity: int</text>
+    <text x="12" y="124" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- unitPrice: double</text>
+    <text x="12" y="142" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- totalValue: double</text>
+    <text x="12" y="160" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- profitLoss: double</text>
+    <line x1="0" y1="170" x2="270" y2="170" stroke="#2563EB" stroke-width="1"/>
+    <text x="12" y="192" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ computeProfit(): double</text>
+    <text x="12" y="210" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ toOracleRow(): Object[]</text>
+  </g>
+
+  <!-- Class 5: SerialImei -->
+  <g transform="translate(480, 440)">
+    <rect width="280" height="200" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="280" height="30" rx="4" fill="#DBEAFE"/>
+    <text x="140" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8" text-anchor="middle">SerialImei</text>
+    <line x1="0" y1="30" x2="280" y2="30" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="12" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- id: String</text>
+    <text x="12" y="70" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- productId: String</text>
+    <text x="12" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- serialNumber: String</text>
+    <text x="12" y="106" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- imei: String</text>
+    <text x="12" y="124" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- status: String</text>
+    <text x="12" y="142" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- customerRef: String</text>
+    <line x1="0" y1="152" x2="280" y2="152" stroke="#2563EB" stroke-width="1"/>
+    <text x="12" y="174" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ markSold(cust: String): void</text>
+    <text x="12" y="192" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ setServiceStatus(): void</text>
+  </g>
+
+  <!-- Class 6: Warranty -->
+  <g transform="translate(880, 440)">
+    <rect width="270" height="200" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="270" height="30" rx="4" fill="#DBEAFE"/>
+    <text x="135" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Warranty</text>
+    <line x1="0" y1="30" x2="270" y2="30" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="12" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- id: String</text>
+    <text x="12" y="70" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- serialNumber: String</text>
+    <text x="12" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- customerName: String</text>
+    <text x="12" y="106" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- startDate: Timestamp</text>
+    <text x="12" y="124" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- endDate: Timestamp</text>
+    <text x="12" y="142" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- status: String</text>
+    <line x1="0" y1="152" x2="270" y2="152" stroke="#2563EB" stroke-width="1"/>
+    <text x="12" y="174" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ isExpired(): boolean</text>
+    <text x="12" y="192" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ addClaim(claim: Claim): void</text>
+  </g>
+
+  <!-- Class 7: DataStore (Service) -->
+  <g transform="translate(480, 750)">
+    <rect width="280" height="240" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="2"/>
+    <rect width="280" height="30" rx="4" fill="#CCFBF1"/>
+    <text x="140" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#0F766E" text-anchor="middle">DataStore (Singleton)</text>
+    <line x1="0" y1="30" x2="280" y2="30" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="12" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- instance: DataStore</text>
+    <text x="12" y="70" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- products: List&lt;Product&gt;</text>
+    <text x="12" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- transactions: List&lt;Transaction&gt;</text>
+    <text x="12" y="106" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- serials: List&lt;SerialImei&gt;</text>
+    <line x1="0" y1="116" x2="280" y2="116" stroke="#0F766E" stroke-width="1"/>
+    <text x="12" y="136" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ getInstance(): DataStore</text>
+    <text x="12" y="154" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ addProduct(p: Product): Product</text>
+    <text x="12" y="172" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ stockIn(prodId, qty, ...): Map</text>
+    <text x="12" y="190" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ stockOut(prodId, qty, ...): Map</text>
+    <text x="12" y="208" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ seedInitialData(): void</text>
+  </g>
+
+  <!-- Class 8: OracleDbService -->
+  <g transform="translate(880, 750)">
+    <rect width="270" height="240" rx="4" fill="#FFFFFF" stroke="#0F766E" stroke-width="2"/>
+    <rect width="270" height="30" rx="4" fill="#CCFBF1"/>
+    <text x="135" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#0F766E" text-anchor="middle">OracleDbService</text>
+    <line x1="0" y1="30" x2="270" y2="30" stroke="#0F766E" stroke-width="1.5"/>
+    <text x="12" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- url: jdbc:oracle:thin:@...:XE</text>
+    <text x="12" y="70" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- user: system</text>
+    <text x="12" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">- pass: 123456</text>
+    <line x1="0" y1="98" x2="270" y2="98" stroke="#0F766E" stroke-width="1"/>
+    <text x="12" y="118" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ isAvailable(): boolean</text>
+    <text x="12" y="136" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ fetchProducts(): List&lt;Prod&gt;</text>
+    <text x="12" y="154" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ fetchTransactions(): List&lt;Txn&gt;</text>
+    <text x="12" y="172" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ insertProduct(p: Product): void</text>
+    <text x="12" y="190" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ insertTransaction(t: Txn): void</text>
+    <text x="12" y="208" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">+ updateProductStock(id, qty): void</text>
+  </g>
+
+  <!-- Relationships -->
+  <!-- Category 1 to * Product -->
+  <line x1="340" y1="210" x2="480" y2="210" stroke="#334155" stroke-width="1.5"/>
+  <text x="350" y="200" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">1</text>
+  <text x="460" y="200" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">0..*</text>
+
+  <!-- Product * to 1 Supplier -->
+  <line x1="760" y1="210" x2="900" y2="210" stroke="#334155" stroke-width="1.5"/>
+  <text x="770" y="200" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">0..*</text>
+  <text x="880" y="200" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">1</text>
+
+  <!-- Product 1 to * Transaction -->
+  <line x1="480" y1="320" x2="270" y2="430" stroke="#334155" stroke-width="1.5"/>
+  <text x="430" y="340" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">1</text>
+  <text x="290" y="420" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">0..*</text>
+
+  <!-- Product 1 to * SerialImei -->
+  <line x1="620" y1="350" x2="620" y2="440" stroke="#334155" stroke-width="1.5"/>
+  <text x="630" y="370" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">1</text>
+  <text x="630" y="430" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">0..*</text>
+
+  <!-- Product 1 to * Warranty -->
+  <line x1="760" y1="320" x2="950" y2="440" stroke="#334155" stroke-width="1.5"/>
+  <text x="790" y="340" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">1</text>
+  <text x="920" y="420" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">0..*</text>
+
+  <!-- DataStore -> OracleDbService -->
+  <line x1="760" y1="870" x2="880" y2="870" stroke="#0F766E" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="790" y="860" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#0F766E">&lt;&lt;uses&gt;&gt;</text>
+</svg>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 950" width="1300" height="950">
+  <rect width="1300" height="950" fill="#FFFFFF"/>
+  
+  <!-- Header -->
+  <rect x="50" y="25" width="1200" height="55" rx="8" fill="#1E293B"/>
+  <text x="650" y="60" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    ElectroStock - UML Use Case Diagram
+  </text>
+
+  <!-- System Boundary -->
+  <rect x="360" y="105" width="600" height="810" rx="10" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <text x="660" y="135" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B" text-anchor="middle">
+    ElectroStock Inventory &amp; ERP Management System
+  </text>
+
+  <!-- Actor 1: Administrator -->
+  <g transform="translate(120, 200)">
+    <circle cx="40" cy="30" r="18" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="48" x2="40" y2="95" stroke="#0F172A" stroke-width="2"/>
+    <line x1="10" y1="65" x2="70" y2="65" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="95" x2="15" y2="135" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="95" x2="65" y2="135" stroke="#0F172A" stroke-width="2"/>
+    <text x="40" y="160" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0F172A" text-anchor="middle">Administrator</text>
+  </g>
+
+  <!-- Actor 2: Store Manager -->
+  <g transform="translate(120, 410)">
+    <circle cx="40" cy="30" r="18" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="48" x2="40" y2="95" stroke="#0F172A" stroke-width="2"/>
+    <line x1="10" y1="65" x2="70" y2="65" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="95" x2="15" y2="135" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="95" x2="65" y2="135" stroke="#0F172A" stroke-width="2"/>
+    <text x="40" y="160" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0F172A" text-anchor="middle">Store Manager</text>
+  </g>
+
+  <!-- Actor 3: Cashier / POS Staff -->
+  <g transform="translate(120, 630)">
+    <circle cx="40" cy="30" r="18" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="48" x2="40" y2="95" stroke="#0F172A" stroke-width="2"/>
+    <line x1="10" y1="65" x2="70" y2="65" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="95" x2="15" y2="135" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="95" x2="65" y2="135" stroke="#0F172A" stroke-width="2"/>
+    <text x="40" y="160" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0F172A" text-anchor="middle">Cashier / POS Staff</text>
+  </g>
+
+  <!-- Actor 4: Technician / Support -->
+  <g transform="translate(1080, 410)">
+    <circle cx="40" cy="30" r="18" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="48" x2="40" y2="95" stroke="#0F172A" stroke-width="2"/>
+    <line x1="10" y1="65" x2="70" y2="65" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="95" x2="15" y2="135" stroke="#0F172A" stroke-width="2"/>
+    <line x1="40" y1="95" x2="65" y2="135" stroke="#0F172A" stroke-width="2"/>
+    <text x="40" y="160" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0F172A" text-anchor="middle">Technician / Support</text>
+  </g>
+
+  <!-- Actor 5: Oracle Database Server -->
+  <g transform="translate(1080, 650)">
+    <rect x="0" y="10" width="90" height="90" rx="6" fill="#F1F5F9" stroke="#0D9488" stroke-width="2"/>
+    <text x="45" y="45" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#0F766E" text-anchor="middle">&lt;&lt;System&gt;&gt;</text>
+    <text x="45" y="65" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0F766E" text-anchor="middle">Oracle DB</text>
+    <text x="45" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#0F766E" text-anchor="middle">(XE Engine)</text>
+  </g>
+
+  <!-- Use Cases Inside Boundary -->
+  <!-- UC1 -->
+  <g transform="translate(430, 160)">
+    <ellipse cx="140" cy="25" rx="130" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Manage System Users &amp; Roles</text>
+  </g>
+
+  <!-- UC2 -->
+  <g transform="translate(680, 190)">
+    <ellipse cx="130" cy="25" rx="120" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="130" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">System Settings &amp; Backup</text>
+  </g>
+
+  <!-- UC3 -->
+  <g transform="translate(420, 240)">
+    <ellipse cx="140" cy="25" rx="130" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Manage Catalog &amp; Products</text>
+  </g>
+
+  <!-- UC4 -->
+  <g transform="translate(420, 320)">
+    <ellipse cx="140" cy="25" rx="130" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Stock Inbound Consignments</text>
+  </g>
+
+  <!-- UC5 -->
+  <g transform="translate(680, 320)">
+    <ellipse cx="130" cy="25" rx="120" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="130" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Purchase Orders &amp; Suppliers</text>
+  </g>
+
+  <!-- UC6 -->
+  <g transform="translate(420, 410)">
+    <ellipse cx="140" cy="25" rx="130" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Process Customer POS Sale</text>
+  </g>
+
+  <!-- UC7 -->
+  <g transform="translate(680, 440)">
+    <ellipse cx="130" cy="25" rx="120" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="130" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Generate Sales Receipts</text>
+  </g>
+
+  <!-- UC8 -->
+  <g transform="translate(420, 500)">
+    <ellipse cx="140" cy="25" rx="130" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Track Hardware Serial / IMEI</text>
+  </g>
+
+  <!-- UC9 -->
+  <g transform="translate(680, 530)">
+    <ellipse cx="130" cy="25" rx="120" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="130" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Manage Digital Warranties</text>
+  </g>
+
+  <!-- UC10 -->
+  <g transform="translate(680, 620)">
+    <ellipse cx="130" cy="25" rx="120" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="130" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Process RMA Warranty Claims</text>
+  </g>
+
+  <!-- UC11 -->
+  <g transform="translate(420, 650)">
+    <ellipse cx="140" cy="25" rx="130" ry="24" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <text x="140" y="30" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E293B" text-anchor="middle">Audit Stock History &amp; Profit/Loss</text>
+  </g>
+
+  <!-- UC12 -->
+  <g transform="translate(540, 750)">
+    <ellipse cx="150" cy="28" rx="140" ry="26" fill="#CCFBF1" stroke="#0D9488" stroke-width="2"/>
+    <text x="150" y="33" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#0F766E" text-anchor="middle">Persist &amp; Sync to Oracle SQL DB</text>
+  </g>
+
+  <!-- Association Lines -->
+  <!-- Admin -> UC1, UC2, UC3, UC5, UC11 -->
+  <line x1="200" y1="230" x2="430" y2="185" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="200" y1="240" x2="680" y2="215" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="200" y1="250" x2="420" y2="265" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="200" y1="260" x2="420" y2="675" stroke="#64748B" stroke-width="1.5"/>
+
+  <!-- Manager -> UC3, UC4, UC5, UC11 -->
+  <line x1="200" y1="460" x2="420" y2="270" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="200" y1="470" x2="420" y2="345" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="200" y1="480" x2="680" y2="345" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="200" y1="490" x2="420" y2="675" stroke="#64748B" stroke-width="1.5"/>
+
+  <!-- Cashier -> UC6, UC7, UC8 -->
+  <line x1="200" y1="680" x2="420" y2="435" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="200" y1="690" x2="680" y2="465" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="200" y1="700" x2="420" y2="525" stroke="#64748B" stroke-width="1.5"/>
+
+  <!-- Tech -> UC8, UC9, UC10 -->
+  <line x1="1080" y1="460" x2="700" y2="525" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="1080" y1="470" x2="810" y2="555" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="1080" y1="480" x2="810" y2="645" stroke="#64748B" stroke-width="1.5"/>
+
+  <!-- <<include>> relationships -->
+  <!-- UC6 includes UC7 -->
+  <line x1="560" y1="435" x2="680" y2="460" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="610" y="440" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#0284C7">&lt;&lt;include&gt;&gt;</text>
+
+  <!-- UC6 includes UC9 -->
+  <line x1="550" y1="445" x2="690" y2="535" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="615" y="495" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#0284C7">&lt;&lt;include&gt;&gt;</text>
+
+  <!-- UC12 connected to Oracle DB -->
+  <line x1="840" y1="770" x2="1080" y2="700" stroke="#0D9488" stroke-width="2"/>
+</svg>

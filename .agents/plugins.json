@@ -1,0 +1,6 @@
+{
+  "entries": [
+    { "path": ".agents/plugins/ponytail" },
+    { "path": ".agents/plugins/karpathy" }
+  ]
+}

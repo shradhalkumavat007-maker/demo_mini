@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 850" width="1350" height="850">
+  <rect width="1350" height="850" fill="#FFFFFF"/>
+  
+  <!-- Header -->
+  <rect x="50" y="25" width="1250" height="55" rx="8" fill="#1E293B"/>
+  <text x="675" y="60" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    ElectroStock - UML State Machine Diagram: Hardware Serial &amp; Warranty Lifecycle
+  </text>
+
+  <!-- Initial Node -->
+  <circle cx="100" cy="220" r="14" fill="#0F172A"/>
+  <line x1="114" y1="220" x2="180" y2="220" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="145" y="210" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Purchase PO</text>
+
+  <!-- State 1: Inbound Ordered -->
+  <rect x="180" y="195" width="180" height="55" rx="8" fill="#F1F5F9" stroke="#475569" stroke-width="2"/>
+  <text x="270" y="228" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E293B" text-anchor="middle">Inbound Ordered</text>
+
+  <!-- Transition -> Available -->
+  <line x1="360" y1="220" x2="440" y2="220" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="400" y="210" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle">Receive &amp; SN</text>
+
+  <!-- State 2: Available in Stock -->
+  <rect x="440" y="195" width="200" height="55" rx="8" fill="#ECFDF5" stroke="#059669" stroke-width="2"/>
+  <text x="540" y="228" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#047857" text-anchor="middle">Available in Stock</text>
+
+  <!-- Transition -> Sold -->
+  <line x1="640" y1="220" x2="740" y2="220" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="690" y="210" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle">POS Checkout</text>
+
+  <!-- State 3: Sold to Customer -->
+  <rect x="740" y="195" width="180" height="55" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="830" y="228" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Sold &amp; Dispatched</text>
+
+  <!-- Transition -> Active Warranty -->
+  <line x1="920" y1="220" x2="1010" y2="220" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="965" y="210" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle">Register</text>
+
+  <!-- State 4: Active Warranty -->
+  <rect x="1010" y="195" width="200" height="55" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="1110" y="228" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Warranty Active</text>
+
+  <!-- RMA Cycle (Down and across) -->
+  <line x1="1110" y1="250" x2="1110" y2="380" stroke="#0F172A" stroke-width="2"/>
+  <line x1="1110" y1="380" x2="850" y2="380" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="980" y="370" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#DC2626">Customer Files RMA Claim</text>
+
+  <!-- State 5: In Repair -->
+  <rect x="650" y="350" width="200" height="60" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="750" y="378" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#B45309" text-anchor="middle">In Repair / RMA</text>
+  <text x="750" y="398" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#92400E" text-anchor="middle">Hardware Diagnosis</text>
+
+  <!-- Return from repair to Active Warranty -->
+  <line x1="750" y1="350" x2="750" y2="300" stroke="#16A34A" stroke-width="2"/>
+  <line x1="750" y1="300" x2="1050" y2="300" stroke="#16A34A" stroke-width="2"/>
+  <line x1="1050" y1="300" x2="1050" y2="250" stroke="#16A34A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="900" y="290" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#16A34A">Repair Resolved &amp; Returned</text>
+
+  <!-- Transition from Active Warranty to Expiring Soon -->
+  <line x1="1110" y1="250" x2="1110" y2="520" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="1115" y="470" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#D97706">&lt; 30 Days Left</text>
+
+  <!-- State 6: Expiring Soon -->
+  <rect x="1010" y="520" width="200" height="55" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <text x="1110" y="553" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#B45309" text-anchor="middle">Expiring Soon</text>
+
+  <!-- Transition to Expired -->
+  <line x1="1110" y1="575" x2="1110" y2="670" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <text x="1115" y="630" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10" fill="#475569">End Date Reached</text>
+
+  <!-- State 7: Expired -->
+  <rect x="1010" y="670" width="200" height="55" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="2"/>
+  <text x="1110" y="703" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#475569" text-anchor="middle">Warranty Expired</text>
+
+  <!-- Final State -->
+  <line x1="1010" y1="697" x2="880" y2="697" stroke="#0F172A" stroke-width="2" marker-end="url(#arrow-dark)"/>
+  <circle cx="850" cy="697" r="16" fill="#FFFFFF" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="850" cy="697" r="10" fill="#0F172A"/>
+  <text x="850" y="730" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#475569" text-anchor="middle">Archived Record</text>
+</svg>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <rect width="1400" height="900" fill="#FFFFFF"/>
+  
+  <!-- Header -->
+  <rect x="50" y="30" width="1300" height="60" rx="8" fill="#1E293B"/>
+  <text x="700" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">
+    ElectroStock - Electronics Inventory &amp; ERP System Architecture
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="700" y="115" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">
+    3-Tier Enterprise Architecture: Client Presentation Layer | Application &amp; REST Logic Layer | Oracle Database Persistence
+  </text>
+
+  <!-- ================= TIER 1: PRESENTATION LAYER ================= -->
+  <rect x="50" y="140" width="1300" height="200" rx="8" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <rect x="70" y="150" width="260" height="28" rx="4" fill="#0284C7"/>
+  <text x="200" y="169" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    TIER 1: PRESENTATION LAYER
+  </text>
+
+  <!-- Browser / UI Box -->
+  <g transform="translate(100, 195)">
+    <rect width="320" height="125" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="2"/>
+    <rect width="320" height="32" rx="6" fill="#E0F2FE"/>
+    <text x="160" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0369A1" text-anchor="middle">Web Client (Browser)</text>
+    <text x="20" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Next.js 13+ Responsive UI (Port 3000)</text>
+    <text x="20" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• React 18 Components &amp; Hooks</text>
+    <text x="20" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Tailwind CSS &amp; Radix UI Primitives</text>
+    <text x="20" y="115" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Lucide Icons &amp; Recharts Analytics</text>
+  </g>
+
+  <!-- Modules Box -->
+  <g transform="translate(480, 195)">
+    <rect width="440" height="125" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="2"/>
+    <rect width="440" height="32" rx="6" fill="#E0F2FE"/>
+    <text x="220" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0369A1" text-anchor="middle">Application Modules</text>
+    <text x="20" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Catalog &amp; Products (/products)</text>
+    <text x="20" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Inventory Operations (/inventory/stock-in, /stock-out)</text>
+    <text x="20" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Hardware Serial &amp; IMEI Tracker (/serial-imei)</text>
+    <text x="20" y="115" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Warranty Certificates &amp; RMA Claims (/warranty)</text>
+    <text x="240" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Purchase Center (/purchase-orders)</text>
+    <text x="240" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• POS Receipt Generator (/receipts)</text>
+    <text x="240" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Profit &amp; Loss Financials (/profit-loss)</text>
+    <text x="240" y="115" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• System Settings &amp; Users (/settings)</text>
+  </g>
+
+  <!-- State & Client Service Box -->
+  <g transform="translate(980, 195)">
+    <rect width="320" height="125" rx="6" fill="#FFFFFF" stroke="#0284C7" stroke-width="2"/>
+    <rect width="320" height="32" rx="6" fill="#E0F2FE"/>
+    <text x="160" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0369A1" text-anchor="middle">Client State &amp; Peripherals</text>
+    <text x="20" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Zustand Centralized Store</text>
+    <text x="20" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• API Client (api-client.ts)</text>
+    <text x="20" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Barcode / QR Scanner Integration</text>
+    <text x="20" y="115" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• CSV &amp; PDF Receipt Export Service</text>
+  </g>
+
+  <!-- Flow Arrow Tier 1 -> Tier 2 -->
+  <line x1="700" y1="340" x2="700" y2="380" stroke="#0284C7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <text x="710" y="365" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#0284C7">HTTP / JSON REST API</text>
+
+  <!-- ================= TIER 2: LOGIC & BACKEND LAYER ================= -->
+  <rect x="50" y="380" width="1300" height="250" rx="8" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <rect x="70" y="390" width="310" height="28" rx="4" fill="#2563EB"/>
+  <text x="225" y="409" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    TIER 2: APPLICATION &amp; REST LOGIC LAYER
+  </text>
+
+  <!-- Next.js API Proxy Box -->
+  <g transform="translate(100, 435)">
+    <rect width="320" height="175" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="320" height="32" rx="6" fill="#DBEAFE"/>
+    <text x="160" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Next.js Edge API Proxy (Port 3000)</text>
+    <text x="20" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• /api/products (Proxy to Java &amp; DB)</text>
+    <text x="20" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• /api/transactions (Proxy to Java &amp; DB)</text>
+    <text x="20" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• /api/oracle (Live Telemetry &amp; Stats)</text>
+    <text x="20" y="115" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• /api/health (Diagnostics)</text>
+    <text x="20" y="135" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• SQLite Local Dev Cache (Prisma)</text>
+    <text x="20" y="155" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Automatic Request Forwarding</text>
+  </g>
+
+  <!-- Java 26 Native REST API Server Box -->
+  <g transform="translate(480, 435)">
+    <rect width="440" height="175" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="440" height="32" rx="6" fill="#DBEAFE"/>
+    <text x="220" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Java 26 REST API Server (Port 8085)</text>
+    <text x="20" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• ElectroStockServer (JDK HttpServer Engine)</text>
+    <text x="20" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Multithreaded Executor Pool (16 Threads)</text>
+    <text x="20" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Full CORS Headers &amp; Preflight Support</text>
+    <text x="20" y="115" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Live Terminal Heartbeat Monitor Thread</text>
+    <text x="20" y="135" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Fast JSON Parser / Serializer (JsonUtil)</text>
+    <text x="20" y="155" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Dynamic Port Binding (8085 / 8080 fallback)</text>
+  </g>
+
+  <!-- Business Logic & Oracle Service Box -->
+  <g transform="translate(980, 435)">
+    <rect width="320" height="175" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+    <rect width="320" height="32" rx="6" fill="#DBEAFE"/>
+    <text x="160" y="21" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Core Services &amp; Persistence</text>
+    <text x="20" y="55" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• DataStore.java (Thread-safe Cache)</text>
+    <text x="20" y="75" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• OracleDbService.java (JDBC Bridge)</text>
+    <text x="20" y="95" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Stock-In &amp; Stock-Out Validator</text>
+    <text x="20" y="115" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• COGS &amp; Gross Profit/Loss Engine</text>
+    <text x="20" y="135" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Warranty Lifecycle State Machine</text>
+    <text x="20" y="155" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Automated Low-Stock Alert Monitor</text>
+  </g>
+
+  <!-- Flow Arrow Tier 2 -> Tier 3 -->
+  <line x1="700" y1="630" x2="700" y2="670" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+  <text x="710" y="655" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#2563EB">Oracle JDBC Thin Protocol (TCP 1521)</text>
+
+  <!-- ================= TIER 3: DATABASE TIER ================= -->
+  <rect x="50" y="670" width="1300" height="190" rx="8" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <rect x="70" y="680" width="280" height="28" rx="4" fill="#0D9488"/>
+  <text x="210" y="699" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    TIER 3: DATABASE PERSISTENCE LAYER
+  </text>
+
+  <!-- Oracle XE Cylinder & Details -->
+  <g transform="translate(100, 725)">
+    <rect width="320" height="115" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+    <rect width="320" height="30" rx="6" fill="#CCFBF1"/>
+    <text x="160" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0F766E" text-anchor="middle">Oracle Database 10g Express Edition</text>
+    <text x="20" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Instance SID: XE | Port: 1521</text>
+    <text x="20" y="72" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• Schema / User: system / 123456</text>
+    <text x="20" y="92" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• JDBC: jdbc:oracle:thin:@localhost:1521:XE</text>
+  </g>
+
+  <!-- Database Tables Box -->
+  <g transform="translate(480, 725)">
+    <rect width="780" height="115" rx="6" fill="#FFFFFF" stroke="#0D9488" stroke-width="2"/>
+    <rect width="780" height="30" rx="6" fill="#CCFBF1"/>
+    <text x="390" y="20" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#0F766E" text-anchor="middle">ElectroStock Oracle SQL Database Relational Schema</text>
+    <text x="20" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• PRODUCTS (Catalog, SKU, Brand, Stock, Prices)</text>
+    <text x="20" y="72" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• TRANSACTIONS (Stock-In, Stock-Out, Profit/Loss, Audit)</text>
+    <text x="20" y="92" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• SERIAL_IMEI (Individual Hardware SN Tracking)</text>
+    <text x="390" y="52" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• CATEGORIES &amp; SUPPLIERS (GSTIN, Terms)</text>
+    <text x="390" y="72" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• WARRANTIES &amp; WARRANTY_CLAIMS (RMA)</text>
+    <text x="390" y="92" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#334155">• PURCHASE_ORDERS &amp; SALES_RECEIPTS</text>
+  </g>
+
+  <!-- Markers -->
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563EB"/>
+    </marker>
+  </defs>
+</svg>

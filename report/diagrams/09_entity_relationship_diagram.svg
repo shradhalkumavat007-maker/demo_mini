@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1150" width="1500" height="1150">
+  <rect width="1500" height="1150" fill="#FFFFFF"/>
+  
+  <!-- Header -->
+  <rect x="50" y="25" width="1400" height="55" rx="8" fill="#1E293B"/>
+  <text x="750" y="60" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">
+    ElectroStock - Database Entity-Relationship (ER) Diagram (Oracle SQL Schema)
+  </text>
+
+  <!-- Table 1: CATEGORIES -->
+  <g transform="translate(80, 120)">
+    <rect width="260" height="130" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="260" height="28" rx="4" fill="#1E293B"/>
+    <text x="130" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">CATEGORIES</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">name: VARCHAR2(255) [UNIQUE]</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">description: VARCHAR2(1000)</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">created_at: TIMESTAMP</text>
+  </g>
+
+  <!-- Table 2: SUPPLIERS -->
+  <g transform="translate(80, 310)">
+    <rect width="260" height="190" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="260" height="28" rx="4" fill="#1E293B"/>
+    <text x="130" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SUPPLIERS</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">name: VARCHAR2(255)</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">company: VARCHAR2(255)</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">email: VARCHAR2(255)</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">phone: VARCHAR2(50)</text>
+    <text x="40" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">gstin: VARCHAR2(50)</text>
+    <text x="40" y="168" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">status: VARCHAR2(50)</text>
+  </g>
+
+  <!-- Table 3: PRODUCTS -->
+  <g transform="translate(460, 180)">
+    <rect width="300" height="270" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/>
+    <rect width="300" height="28" rx="4" fill="#2563EB"/>
+    <text x="150" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">PRODUCTS</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">name: VARCHAR2(255)</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">sku: VARCHAR2(100) [UNIQUE]</text>
+    <text x="12" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2563EB">FK</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">category_id: VARCHAR2(64)</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">brand: VARCHAR2(100)</text>
+    <text x="40" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">model: VARCHAR2(100)</text>
+    <text x="12" y="168" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2563EB">FK</text>
+    <text x="40" y="168" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">supplier_id: VARCHAR2(64)</text>
+    <text x="40" y="188" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">stock: NUMBER(10)</text>
+    <text x="40" y="208" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">min_stock: NUMBER(10)</text>
+    <text x="40" y="228" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">purchase_price: NUMBER(12,2)</text>
+    <text x="40" y="248" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">selling_price: NUMBER(12,2)</text>
+  </g>
+
+  <!-- Table 4: SERIAL_IMEI -->
+  <g transform="translate(880, 120)">
+    <rect width="280" height="210" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="280" height="28" rx="4" fill="#1E293B"/>
+    <text x="140" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SERIAL_IMEI</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="12" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2563EB">FK</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">product_id: VARCHAR2(64)</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">product_name: VARCHAR2(255)</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">serial_number: VARCHAR2(100) [UQ]</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">imei: VARCHAR2(100)</text>
+    <text x="40" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">status: VARCHAR2(50)</text>
+    <text x="40" y="168" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">customer_ref: VARCHAR2(255)</text>
+    <text x="40" y="188" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">date_sold: TIMESTAMP</text>
+  </g>
+
+  <!-- Table 5: TRANSACTIONS -->
+  <g transform="translate(880, 380)">
+    <rect width="280" height="270" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="280" height="28" rx="4" fill="#1E293B"/>
+    <text x="140" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">TRANSACTIONS</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="12" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2563EB">FK</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">product_id: VARCHAR2(64)</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">product_name: VARCHAR2(255)</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">type: VARCHAR2(50)</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">quantity: NUMBER(10)</text>
+    <text x="40" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">unit_price: NUMBER(12,2)</text>
+    <text x="40" y="168" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">total_value: NUMBER(12,2)</text>
+    <text x="40" y="188" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">purchase_cost: NUMBER(12,2)</text>
+    <text x="40" y="208" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">profit_loss: NUMBER(12,2)</text>
+    <text x="40" y="228" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">trans_date: TIMESTAMP</text>
+    <text x="40" y="248" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">user_name: VARCHAR2(255)</text>
+  </g>
+
+  <!-- Table 6: WARRANTIES -->
+  <g transform="translate(460, 520)">
+    <rect width="300" height="210" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="300" height="28" rx="4" fill="#1E293B"/>
+    <text x="150" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">WARRANTIES</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="12" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2563EB">FK</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">product_id: VARCHAR2(64)</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">serial_number: VARCHAR2(100)</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">customer_name: VARCHAR2(255)</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">customer_phone: VARCHAR2(50)</text>
+    <text x="40" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">start_date: TIMESTAMP</text>
+    <text x="40" y="168" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">end_date: TIMESTAMP</text>
+    <text x="40" y="188" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">status: VARCHAR2(50)</text>
+  </g>
+
+  <!-- Table 7: WARRANTY_CLAIMS -->
+  <g transform="translate(80, 560)">
+    <rect width="260" height="150" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="260" height="28" rx="4" fill="#1E293B"/>
+    <text x="130" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">WARRANTY_CLAIMS</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="12" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2563EB">FK</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">warranty_id: VARCHAR2(64)</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">claim_date: TIMESTAMP</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">issue_description: VARCHAR2(2000)</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">status: VARCHAR2(50)</text>
+  </g>
+
+  <!-- Table 8: USERS -->
+  <g transform="translate(80, 780)">
+    <rect width="260" height="170" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="260" height="28" rx="4" fill="#1E293B"/>
+    <text x="130" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">USERS</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">name: VARCHAR2(255)</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">email: VARCHAR2(255) [UNIQUE]</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">password_hash: VARCHAR2(255)</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">role: VARCHAR2(50)</text>
+    <text x="40" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">status: VARCHAR2(50)</text>
+  </g>
+
+  <!-- Table 9: SALES_RECEIPTS -->
+  <g transform="translate(460, 780)">
+    <rect width="300" height="170" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="300" height="28" rx="4" fill="#1E293B"/>
+    <text x="150" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SALES_RECEIPTS</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">receipt_number: VARCHAR2(100) [UQ]</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">customer_name: VARCHAR2(255)</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">subtotal: NUMBER(12,2)</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">grand_total: NUMBER(12,2)</text>
+    <text x="40" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">payment_method: VARCHAR2(50)</text>
+  </g>
+
+  <!-- Table 10: PURCHASE_ORDERS -->
+  <g transform="translate(880, 780)">
+    <rect width="280" height="170" rx="4" fill="#FFFFFF" stroke="#1E293B" stroke-width="2"/>
+    <rect width="280" height="28" rx="4" fill="#1E293B"/>
+    <text x="140" y="19" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">PURCHASE_ORDERS</text>
+    <text x="12" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#DC2626">PK</text>
+    <text x="40" y="48" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">id: VARCHAR2(64)</text>
+    <text x="40" y="68" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">po_number: VARCHAR2(100) [UQ]</text>
+    <text x="12" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#2563EB">FK</text>
+    <text x="40" y="88" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">supplier_id: VARCHAR2(64)</text>
+    <text x="40" y="108" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">supplier_name: VARCHAR2(255)</text>
+    <text x="40" y="128" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">status: VARCHAR2(50)</text>
+    <text x="40" y="148" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" fill="#1E293B">total_amount: NUMBER(12,2)</text>
+  </g>
+
+  <!-- Relationship Lines (Crow's Foot) -->
+  <!-- Categories 1 to * Products -->
+  <line x1="340" y1="180" x2="460" y2="230" stroke="#2563EB" stroke-width="2"/>
+  <text x="350" y="175" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">1</text>
+  <text x="440" y="220" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">∞</text>
+
+  <!-- Suppliers 1 to * Products -->
+  <line x1="340" y1="360" x2="460" y2="330" stroke="#2563EB" stroke-width="2"/>
+  <text x="350" y="375" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">1</text>
+  <text x="440" y="320" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">∞</text>
+
+  <!-- Products 1 to * SerialImei -->
+  <line x1="760" y1="230" x2="880" y2="200" stroke="#2563EB" stroke-width="2"/>
+  <text x="770" y="220" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">1</text>
+  <text x="860" y="195" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">∞</text>
+
+  <!-- Products 1 to * Transactions -->
+  <line x1="760" y1="340" x2="880" y2="440" stroke="#2563EB" stroke-width="2"/>
+  <text x="770" y="335" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">1</text>
+  <text x="860" y="430" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">∞</text>
+
+  <!-- Products 1 to * Warranties -->
+  <line x1="600" y1="450" x2="600" y2="520" stroke="#2563EB" stroke-width="2"/>
+  <text x="610" y="470" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">1</text>
+  <text x="610" y="505" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">∞</text>
+
+  <!-- Warranties 1 to * Warranty Claims -->
+  <line x1="460" y1="620" x2="340" y2="620" stroke="#2563EB" stroke-width="2"/>
+  <text x="445" y="615" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">1</text>
+  <text x="355" y="615" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2563EB">∞</text>
+</svg>

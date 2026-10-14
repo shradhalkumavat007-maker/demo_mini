@@ -1,0 +1,16 @@
+import type { SerialImei } from '@/types/serial';
+
+export const mockSerials: SerialImei[] = [
+  { id: 'ser-1', productId: 'prod-1', productName: 'Samsung 55" Crystal 4K Smart TV', serialNumber: 'SAM55KLA001', imei: null, status: 'sold', warrantyId: 'war-1', dateAdded: '2024-01-15T11:00:00Z', dateSold: '2024-02-10T14:30:00Z', customerRef: 'CUST-Sharma Electronics' },
+  { id: 'ser-2', productId: 'prod-1', productName: 'Samsung 55" Crystal 4K Smart TV', serialNumber: 'SAM55KLA002', imei: null, status: 'sold', warrantyId: 'war-2', dateAdded: '2024-01-15T11:00:00Z', dateSold: '2024-03-15T15:00:00Z', customerRef: 'CUST-Verma Retail' },
+  { id: 'ser-3', productId: 'prod-1', productName: 'Samsung 55" Crystal 4K Smart TV', serialNumber: 'SAM55KLA003', imei: null, status: 'available', warrantyId: null, dateAdded: '2024-01-15T11:00:00Z', dateSold: null, customerRef: null },
+  { id: 'ser-4', productId: 'prod-4', productName: 'Apple iPhone 15 (128GB)', serialNumber: 'APLIP15A0001', imei: '356789012345001', status: 'available', warrantyId: null, dateAdded: '2024-02-01T10:00:00Z', dateSold: null, customerRef: null },
+  { id: 'ser-5', productId: 'prod-5', productName: 'Samsung Galaxy S24 5G (256GB)', serialNumber: 'SAMGS24B0001', imei: '356789012345002', status: 'sold', warrantyId: 'war-4', dateAdded: '2024-02-05T10:00:00Z', dateSold: '2024-07-15T15:30:00Z', customerRef: 'CUST-Individual Sale' },
+  { id: 'ser-6', productId: 'prod-5', productName: 'Samsung Galaxy S24 5G (256GB)', serialNumber: 'SAMGS24B0002', imei: '356789012345003', status: 'available', warrantyId: null, dateAdded: '2024-02-05T10:00:00Z', dateSold: null, customerRef: null },
+  { id: 'ser-7', productId: 'prod-5', productName: 'Samsung Galaxy S24 5G (256GB)', serialNumber: 'SAMGS24B0003', imei: '356789012345004', status: 'reserved', warrantyId: null, dateAdded: '2024-02-05T10:00:00Z', dateSold: null, customerRef: 'CUST-Reddy Mobile' },
+  { id: 'ser-8', productId: 'prod-6', productName: 'Dell Inspiron 15 Laptop (i5/8GB/512GB)', serialNumber: 'DELLINSP15A001', imei: null, status: 'sold', warrantyId: 'war-3', dateAdded: '2024-02-10T10:00:00Z', dateSold: '2024-05-02T16:00:00Z', customerRef: 'CUST-Gupta Office' },
+  { id: 'ser-9', productId: 'prod-7', productName: 'HP Pavilion 14 Laptop (Ryzen 5/16GB/512GB)', serialNumber: 'HP PAV14A001', imei: null, status: 'sold', warrantyId: 'war-5', dateAdded: '2024-02-12T10:00:00Z', dateSold: '2024-08-15T16:00:00Z', customerRef: 'CUST-Kapoor Designs' },
+  { id: 'ser-10', productId: 'prod-7', productName: 'HP Pavilion 14 Laptop (Ryzen 5/16GB/512GB)', serialNumber: 'HP PAV14A002', imei: null, status: 'available', warrantyId: null, dateAdded: '2024-02-12T10:00:00Z', dateSold: null, customerRef: null },
+  { id: 'ser-11', productId: 'prod-10', productName: 'JBL Tune 760NC Wireless Headphones', serialNumber: 'JBL760NC0001A', imei: null, status: 'sold', warrantyId: null, dateAdded: '2024-04-20T10:00:00Z', dateSold: '2024-09-10T14:00:00Z', customerRef: 'CUST-Individual Sale' },
+  { id: 'ser-12', productId: 'prod-10', productName: 'JBL Tune 760NC Wireless Headphones', serialNumber: 'JBL760NC0002A', imei: null, status: 'service', warrantyId: null, dateAdded: '2024-04-20T10:00:00Z', dateSold: null, customerRef: 'CUST-Service Center' },
+];
